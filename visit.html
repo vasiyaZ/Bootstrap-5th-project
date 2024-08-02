@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISIT UCHICAGO PAGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .image-section {
+            position: relative;
+            text-align: center;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 40%;
+        }
+
+        .image-section .overlay-heading {
+            font-size: 3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .button-group {
+            background-color: #800000;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            /* margin-top: 20px; */
+            padding: 30px 0px;
+        }
+
+        .map-container {
+            position: relative;
+            height: 400px;
+            background-color: #e9ecef;
+            /* Fallback color if the map doesn't load */
+        }
+
+        .card-on-map {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            /* Ensure the card is above the map */
+        }
+        @media screen and (max-width:700px){
+            .image-section .overlay-heading{
+                font-size:1.5rem ;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Primary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm" style="background-color: maroon; height:40px;">
+
+        <a class="navbar-brand" href="index1.html"
+            style="color: white; font-weight: bold; font-size: small;"> <img  src="https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix.svg" alt=""
+            style="width: 30px; padding-right: 5px;">THE UNIVERSITY OF CHICAGO</a>
+          
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNavbar"
+            aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="primaryNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#"
+                        style="color: #fff;border-bottom: 1px dotted; font-size: 14px;padding-bottom: 2px;">Undergraduate
+                        Admissions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"
+                        style="color: #fff; border-bottom: 1px dotted;font-size: 14px;padding-bottom: 2px;">Graduate
+                        Admissions</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header-section" style="text-align: center; padding: 40px 0;">
+        <h1>
+            <img src="visit uchicago page/container1 logo.png" alt="Logo" class="img"
+                style="width: 300px; display: block; margin: auto;">
+        </h1>
+    </div>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondaryNavbar"
+                aria-controls="secondaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="secondaryNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="color: #333;">
+                            Plan Your Visit
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#"
+                                style="color: maroon; font-weight: bold;">Accomodations</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-weight: bold;">Tours</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-weight: bold;">Campus
+                                Guides</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html" style="color: #333;">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html" style="color: #333;">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #333;">Architecture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #333;">Maps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #333;">Transportation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #333;">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-search" style="color: maroon;"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Image Section -->
+    <div class="container-fluid p-0">
+        <div class="image-section">
+            <img src="visit uchicago page/banner img.jpg" alt="Fluid Image" class="img-fluid">
+            <h2 class="overlay-heading">Welcome to the University of Chicago</h2>
+        </div>
+    </div>
+
+    <!-- Button Group -->
+    <div class="button-group">
+        <button type="button" class="btn btn-outline-light" style="border: 2px solid white;">TAKE A TOUR</button>
+        <button type="button" class="btn btn-outline-light" style="border: 2px solid white;">ACCOMMODATIONS</button>
+        <button type="button" class="btn btn-outline-light" style="border: 2px solid white; padding: 12px;">EXPLORE
+            UCHICAGO</button>
+    </div>
+    <section class="paragraph-section"
+        style="color: #4d4d4d; text-align: left; font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif; text-align: center;">
+        <p class="h4 p-5">We invite prospective students and visitors to explore our diverse Hyde Park campus and rich
+            legacy of field-defining scholarship and scientific innovation.</p>
+    </section>
+    <!-- Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left Side -->
+            <div class="col-md-8" style="line-height: 2rem;">
+                <!-- First Block -->
+                <h2 style="font-size: 22px; color: #4d4d4d;">Prospective Undergraduate Students</h2>
+                <p style="color: #4d4d4d;"><a href="" style="color: #800000;">The college</a>is renowned for its Core
+                    curriculum, providing students a liberal education that encourages them to explore complex ideas and
+                    processes and empowers their lifelong goals. Learn more about visiting the University of Chicago as
+                    a prospective undergraduate student.</p>
+                <a href="https://collegeadmissions.uchicago.edu/visit"
+                    style="color: #800000; border-bottom: 1px dotted;">Graduate Admissions Tours and Information
+                    »</a><br>
+                <a href="https://collegeadmissions.uchicago.edu/contact"
+                    style="color: #800000; border-bottom: 1px dotted;">Contact UChicago Grad »</a>
+                <hr>
+
+                <!-- Second Block -->
+                <h2 style="font-size: 22px; color: #4d4d4d;">Prospective Graduate Students
+                </h2>
+                <p style="color: #4d4d4d;">As one of the world’s leading research universities, UChicago empowers
+                    students and scholars to ask big questions and challenge conventional thinking. It has over more
+                    than 100 graduate programs to advance your academic career. Learn more about visiting the University
+                    as a prospective graduate student below.</p>
+                <a href="https://www.welcometohydepark.com/"
+                    style="color: #800000; border-bottom: 1px dotted;">Exploring Hyde Park »</a><br>
+                <a href="https://www.choosechicago.com/" style="color: #800000; border-bottom: 1px dotted;">Visiting
+                    Chicago »</a>
+                <hr>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-md-4" style="line-height: 2rem;">
+                <!-- Image Block -->
+                <img src="visit uchicago page/phoenix_maroon-1gnnyf4.svg" alt="Small Image" class="img-fluid">
+                <p style="color: #4d4d4d;">Have a general question about visiting the University?</p>
+                <button type="button" class="btn btn-customize"
+                    style="color: #fff; font-weight: bold; background-color: #800000; width: 100%;">Contact us</button>
+                <hr>
+
+                <!-- Link Block -->
+                <p style="color: #4d4d4d;">
+                    For specific questions regarding admission as an undergraduate or graduate student, visit the <a
+                        href="#" style="color: #800000; border-bottom: 1px dotted;">Office of Undergraduate
+                        Admissions</a> or <a href="#" style="color: #800000; border-bottom: 1px dotted;">Office of
+                        Graduate Admissions</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <h2 style="font-size: 22px; color: #4d4d4d;">Touring Chicago and Hyde Park</h2>
+                <p style="color: #4d4d4d;">One of the defining aspects of UChicago is its location in the vibrant Hyde
+                    Park neighborhood, just 20 minutes south of downtown Chicago. Our global city presence offers
+                    countless opportunities that connect learning on campus to the world outside of the classroom.</p>
+                <a href="https://www.welcometohydepark.com/"
+                    style="color: #800000; border-bottom: 1px dotted;">Exploring Hyde Park »</a><br>
+                <a href="https://www.choosechicago.com/" style="color: #800000; border-bottom: 1px dotted;">Visiting
+                    Chicago »</a>
+                <hr>
+            </div>
+            <div class="col-md-5">
+                <div>
+                    <video controls width="100%">
+                        <source src="visit uchicago page/videoplayback.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section last -->
+    <div class="cont mt-5" style="background-color: maroon; color: #fff;">
+        <div class="row p-4 m-0">
+            <div class="col-md-5" style="line-height: 2rem;">
+                <h2 class="mb-4 p-4" style="border-bottom: 3px solid #fff;">Maps & Transportation</h2>
+                <p>The University of Chicago is located 20 minutes south from downtown Chicago, in historic Hyde Park.
+                </p>
+
+                <ul class="list-unstyled" style="list-style: circle;">
+                    <li><a href="https://collegeadmissions.uchicago.edu/visit/directions-accommodations/location-and-directions"
+                            style="color: #fff; border-bottom: 1px dotted;">Getting to Campus</a></li>
+                    <li><a href="https://safety-security.uchicago.edu/transportation/"
+                            style="color: #fff; border-bottom: 1px dotted;">Transportation at UChicago</a></li>
+                    <li><a href="https://maps.uchicago.edu/" style="color: #fff; border-bottom: 1px dotted;">Interactive
+                            Map</a></li>
+                    <li><a href="https://safety-security.uchicago.edu/transportation/"
+                            style="color: #fff; border-bottom: 1px dotted;">Download PDF Map</a></li>
+                </ul>
+            </div>
+            <!-- rightside -->
+            <div class="col-md-7">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11899.028361601715!2d-87.6003953!3d41.7904484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e291613664845%3A0x5f7f65cf00d2f5ca!2sThe%20University%20of%20Chicago!5e0!3m2!1sen!2sin!4v1721968469533!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer text-white py-5" style="font-family: Montserrat, sans-serif; background-color: #4d4d4d;">
+        <div class="container" style="line-height: 2rem;">
+            <div class="row">
+                <!-- Logo and Address -->
+                <div class="col-md-3 mb-4">
+                    <img src="FooterLogo.jpg" alt="Logo" class="img-fluid mb-3">
+                </div>
+                <!-- address Column -->
+                <div class="col-md-3 mb-4">
+                    <address>
+                        <h5 style="font-weight: bold;">The University of Chicago</h5>
+                        <p> Edward H. Levi Hall
+                            5801 S. Ellis Ave.
+                            Chicago, IL 60637</p>
+                    </address>
+                </div>
+                <!-- Links Column 1 -->
+                <div class="col-md-3 mb-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Title IX</a></li>
+                        <li><a href="#" class="text-white">Non-Discrimination statement</a></li>
+                        <li><a href="#" class="text-white">Accreditation/IBHE Resolution</a></li>
+                        <li><a href="#" class="text-white">Emargency Information</a></li>
+                        <li><a href="#" class="text-white">Job Opportunities</a></li>
+                        <li><a href="#" class="text-white">Make A Gift</a></li>
+                        <li><a href="#" class="text-white">Accessibility</a></li>
+                        <li><a href="#" class="text-white">Privacy</a></li>
+                    </ul>
+                </div>
+                <!-- Links Column 2 -->
+                <div class="col-md-3 mb-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Visit UChicago</a></li>
+                        <li><a href="#" class="text-white">Campus Directory</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">Maps & Directions</a></li>
+                        <li><a href="#" class="text-white">My UChicago</a></li>
+                        <li><a href="#" class="text-white">Office 365</a></li>
+                        <li><a href="#" class="text-white">A-Z Listing</a></li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

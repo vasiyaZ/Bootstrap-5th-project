@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone-University Of Chicago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar-logo {
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translateX(-50%);
+            z-index: 50;
+        }
+
+        .navbar-underline .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        #icons {
+            margin-top: -5px;
+        }
+
+        #navbar2 {
+            margin-top: 5px;
+        }
+
+        /* Custom Styles */
+        .video-section .container {
+            background-color: maroon;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            background: black;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section2 .container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* sec4 */
+        .overlay-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(185, 39, 39, 0.349);
+            /* background: maroon; */
+            transition: opacity .3s ease-in-out;
+        }
+
+        .overlay-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .content-side {
+            border-top: 10px solid maroon;
+            padding-top: 185px;
+        }
+
+
+        @media only screen and (max-width:576px) {
+            .video-section .btn {
+                font-size: 10px;
+                padding: 0.275rem 0.20rem;
+            }
+
+            .section2 h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media only screen and (max-width:992px) {
+            #second-nav {
+                display: none;
+            }
+
+            .navbar-collapse.w-100.order-1.order-md-1.dual-collapse2.collapse.show {
+                margin-top: 32px;
+                padding: 10px;
+                background-color: maroon;
+            }
+
+            div#navbar2 {
+                padding: 10px;
+                background-color: maroon;
+                margin-top: 0px;
+            }
+        }
+
+        @media only screen and (max-width:704px) {
+            .navbar-dark .navbar-toggler {
+                color: rgba(255, 255, 255, .5);
+                border-color: rgba(255, 255, 255, .1);
+                position: absolute;
+            }
+
+            img {
+                vertical-align: middle;
+                border-style: none;
+                width: 200px;
+            }
+
+            .navbar-collapse.w-100.order-1.order-md-1.dual-collapse2.collapse.show {
+                margin-top: 32px;
+                padding: 10px;
+                background-color: maroon;
+            }
+
+            div#navbar2 {
+                padding: 10px;
+                background-color: maroon;
+                margin-top: 0px;
+            }
+
+            #second-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Primary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: maroon; height: 40px; z-index: 1;">
+
+        <div class="navbar-collapse collapse w-100 order-1 order-md-1 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html" style="color: #fff; font-size: 14px;">NEWS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="careers.html" style="color: #fff; font-size: 14px;">CAREERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="visit.html" style="color: #fff; font-size: 14px;">VISIT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: #fff; font-size: 14px;">
+                        INFO FOR
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" style="color: #4D4D4D;">Students</a>
+                        <a class="dropdown-item" href="#">Faculty</a>
+                        <a class="dropdown-item" href="#">Staff</a>
+                        <a class="dropdown-item" href="#">Alumni</a>
+                        <a class="dropdown-item" href="#">Parents</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0 navbar-logo">
+            <a class="navbar-brand mx-auto" href="#"><img src="logo-background.svg" alt="Logo" width="300"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2" style="float: inline-end;
+    font-size: large;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbar2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff; font-size: 14px;">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff; font-size: 14px;">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff; font-size: 14px;">DIRECTORY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="icons" href="#"><i class="nav-link fa fa-search"
+                            style=" color: #fff;"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="second-nav" style="background-color: white;">
+        <div class="container">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="secondary-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            WHO WE ARE
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown1">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Scholarship at
+                                UChicago</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">What we Value</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Facts and
+                                Figures</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Global Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            EDUCATION & RESEARCH
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown2">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Schools &
+                                Divisions</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Academic
+                                Calender</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Office of
+                                Research</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">N12 Education</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Affiliated
+                                Laboratories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown3" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            ADMISSIONS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown3">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Undergraduate
+                                Admissions</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Undergraduate
+                                Programs</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Postgraduate
+                                Programs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Summer
+                                Programs</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Financial Aid
+                                &Tuition</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown4" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            LIFE AT UCHICAGO
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown4">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Hyde Park</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Student life</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Campus
+                                Resources</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Art Institutions
+                                and Programs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">>Health &
+                                Wellness</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Safety &
+                                Security</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" id="secondaryDropdown5" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="font-size: 12px; color: #4D4D4D;">
+                            UCHICAGO MEDICINE
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline my-3 my-sm-0" type="button" style="color: maroon;
+                border-color: maroon; font-size: 14px; font-weight: bold;"><a
+                                href="https://giving.uchicago.edu/site/Donation2?df_id=1681&mfc_pref=T&1681.donation=form1"
+                                style="color: maroon; text-decoration: none;">GIVE</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Video Section -->
+    <section class="video-section" style="padding-top: 5em;">
+        <div class="cont" style="width: 100%;
+        padding-bottom: 1em;
+        background: maroon;">
+            <div class="video-container">
+                <video id="video" class="w-100" controls>
+                    <source src="Homepage Refresh Feb 20 2024.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="d-flex justify-content-center pt-4" style="gap: 2em;">
+                <button type="button" class="btn btn-outline-light ">HOW TO APPLY</button>
+                <button type="button" class="btn btn-outline-light">CONTACT US</button>
+                <button type="button" class="btn btn-outline-light">VISIT OUR CAMPUS</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="section2">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">LATEST NEWS</h2>
+            <div class="row">
+                <!-- card-1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100" style="text-align: center;">
+                        <img src="section2 img/card1.webp" class="card-img-top" alt="Card Image 1">
+                        <div class="card-body" style="background-color: #182f40; color: #fff;">
+                            <a href="https://news.uchicago.edu/story/thirty-one-uchicago-faculty-members-receive-named-distinguished-service-professorships-2024?utm_source=WWW&utm_medium=NewsModule"
+                                class="link-text" style="color: #fff; font-size: 16px; font-weight: bold;">Thirty-one
+                                UChicago faculty members receive
+                                named, distinguished
+                                service professorships in 2024</a>
+                            <small class="NewsItem_source__1SRo8 typography-small">Source: UChicago News</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- card-2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100" style="text-align: center;">
+                        <img src="section2 img/c2.webp" class="card-img-top" alt="Card Image 2">
+                        <div class="card-body" style="background-color: #182f40; color: #fff;">
+                            <a href="https://news.uchicago.edu/story/three-uchicago-undergraduate-students-earn-2024-goldwater-scholarships?utm_source=WWW&utm_medium=NewsModule"
+                                class="card-text" style="color: #fff; font-size: 16px; font-weight: bold;">Three
+                                UChicago undergraduate students earn 2024 Goldwater Scholarships
+                            </a>
+                            <small class="NewsItem_source__1SRo8 typography-small">Source: UChicago News</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- card-3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100" style="text-align: center;">
+                        <img src="section2 img/c3.webp" class="card-img-top" alt="Card Image 3">
+                        <div class="card-body" style="background-color: #182f40; color: #fff;">
+                            <a href="https://news.uchicago.edu/story/eight-books-add-your-summer-2024-reading-list?utm_source=WWW&utm_medium=NewsModule"
+                                class="card-text" style="color: #fff; font-size: 16px; font-weight: bold;">Eight books
+                                to add to your summer 2024 reading list</a>
+                            <small class="NewsItem_source__1SRo8 typography-small">Source: UChicago News</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="section2 img/c4.webp" class="card-img-top" alt="Card Image 4">
+                        <div class="card-body" style="background-color: #182f40; color: #fff;">
+                            <a href="https://news.uchicago.edu/feeling-stuck-heres-how-achieve-breakthrough-adam-alter?utm_source=WWW&utm_medium=NewsModule"
+                                class="card-text" style="color: #fff; font-size: 16px; font-weight: bold;">Big Brains
+                                podcast: Feeling stuck? Here’s how to achieve a breakthrough
+                            </a>
+                            <small class="NewsItem_source__1SRo8 typography-small">Source: UChicago News</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center pt-4">
+                <button type="button" class="btn btn-outline"
+                    style="color: maroon; border-color: maroon; font-weight: bold;">SEE MORE NEWS</button>
+            </div>
+    </section>
+    <!-- Carousel Section -->
+    <section class="carousel-section" style="background-color: #333; padding: 20px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+            </ol>
+            <div class="carousel-inner" style="overflow: hidden;">
+                <div class="carousel-item active">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <img src="div3 img/div3card.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center ">
+                            <div class="carousel-caption d-md-block p-5">
+                                <h1 style="font-size: 2rem; font-weight: bold; color: #fff;">The Day Tomorrow Began</h1>
+                                <p style="font-size: 18px; color: #fff;">LEARN ABOUT THE GENESIS OF GROUNDBREAKING IDEAS
+                                    FROM UCHICAGO.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <img src="div3 img/div3card2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="carousel-caption d-md-block p-5">
+                                <h1 style="font-size: 2rem; font-weight: bold;color: #fff;">Go 'Inside the Lab' at
+                                    UChicago</h1>
+                                <p style="font-size: 18px; color: #fff;">EXPLORE VIDEOS AND Q&AS WITH SCHOLARS
+                                    EXPLAINING THEIR GROUNDBREAKING RESEARCH.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- section-4 -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 text-center py-4" style="color: maroon;font-family: adobe-garamond-pro, serif;">
+                <h3>We value rigorous inquiry</h3>
+            </div>
+            <div class="col-md-6">
+                <p>A diversity of people and ideas, coupled with free and open discourse, lays the foundation for
+                    students and scholars to bring forth original ideas that define fields and enrich human life. </p>
+                <a href="https://www.uchicago.edu/who-we-are" style="color: maroon; font-weight: bold;">LEARN MORE <i
+                        class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3 p-1">
+                <div class="card overlay-card">
+                    <img src="section4 img/div4 c1.webp" class="card-img-top" alt="Image 1">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <p class="card-text">UChicago scholars have led excavations around the world, enriching our
+                                understanding of the past—and of human civilization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-3 p-1">
+                <div class="card overlay-card">
+                    <img src="section4 img/div4 c2.webp" class="card-img-top" alt="Image 2">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <p class="card-text">The Weston Game Lab brings together scholars to explore the artistic,
+                                cultural, and technological aspects of gaming.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-3 p-1">
+                <div class="card overlay-card">
+                    <img src="section4 img/div4 c4.jpg" class="card-img-top" alt="Image 3">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <p class="card-text">UChicago scholars are at the forefront of groundbreaking discoveries
+                                and innovations in various disciplines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3 p-1">
+                <div class="card overlay-card">
+                    <img src="section4 img/div4 c5.webp" class="card-img-top" alt="Image 4">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <p class="card-text">UChicago’s Human Computer
+                                Integration Laboratory works to solve important questions through wearable technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section-5 -->
+    <section class="section5 py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="section-heading" style="color: #4D4D4D; font-size: 26px;">WE FOSTER INDEPENDENT THINKING
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="sec5/s5 c1.webp" class="card-img-top" alt="Card Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: maroon;">Transformative education</h5>
+                            <p class="card-text">UChicago students develop the habits of mind and intellectual skills
+                                needed to confront complex challenges.</p>
+                            <a href="https://www.uchicago.edu/admissions" class="link-text"
+                                style="color: maroon; font-weight: bold;">LEARN MORE <i
+                                    class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="sec5/s5 c2.webp" class="card-img-top" alt="Card Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: maroon;">Field-defining research</h5>
+                            <p class="card-text">UChicago researchers have contributed to some of the world’s greatest
+                                discoveries, advancements, and bodies of knowledge.</p>
+                            <a href="https://www.uchicago.edu/who-we-are/scholarship-at-uchicago" class="link-text"
+                                style="color: maroon; font-weight: bold;">LEARN MORE <i
+                                    class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section-6 -->
+    <section class="section6 py-5" style="background-color: #fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="section-heading" style="color: #4D4D4D; font-size: 26px;">WE ADVANCE IDEAS AND HUMANITY
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <!-- card-1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="sec6/s6 c1.webp" class="card-img-top" alt="Card Image 1">
+                        <div class="card-body" style="background-color: #f8f9fa;">
+                            <h5 class="card-title" style="color: maroon;">Intellectual freedom</h5>
+                            <p class="card-text">Faculty have a free and challenging environment in which to pursue the
+                                most original research.We excel in every field of learning.</p>
+                            <a href="https://www.uchicago.edu/education-and-research" class="link-text"
+                                style="color: maroon; font-weight:bold;">LEARN MORE <i
+                                    class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card-2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="sec6/s6 c2.webp" class="card-img-top" alt="Card Image 2">
+                        <div class="card-body" style="background-color: #f8f9fa;">
+                            <h5 class="card-title" style="color: maroon;">Community impact</h5>
+                            <p class="card-text">As a community partner, we invest in Chicago’s South Side across such
+                                areas as health, education, economic growth, and the arts.</p>
+                            <a href="https://www.uchicago.edu/who-we-are/community-impact" class="link-text"
+                                style="color: maroon; font-weight:bold;">LEARN MORE <i
+                                    class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card-3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="sec6/s6 c3.webp" class="card-img-top" alt="Card Image 3">
+                        <div class="card-body" style="background-color: #f8f9fa;">
+                            <h5 class="card-title" style="color: maroon;">Global impact</h5>
+                            <p class="card-text">We are an international community of scholars working to solve the
+                                world's most pressing issues, with initiatives and programs on all seven continents.</p>
+                            <a href="https://www.uchicago.edu/who-we-are/global-impact" class="link-text"
+                                style="color: maroon; font-weight:bold;">LEARN MORE <i
+                                    class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Section 7 -->
+    <!-- <section class="content-section py-5"> -->
+    <div class="container container-fluid">
+        <div class="row align-items-center" style="background-color: #f8f9fa; ">
+            <div class="col-md-6 content-side" style="padding: 70px;">
+                <h1 class="section-heading" style="color: maroon;font-family: adobe-garamond-pro, serif; ">We welcome
+                    all
+                </h1>
+                <p class="section-text">Only when different values, experiences, and perspectives are met with free and
+                    open discourse can education be truly transformative. This is why we continue to work together as an
+                    institution, and within our community, to promote a more inclusive environment on our campus and
+                    beyond.</p>
+                <a href="#" class="link-text" style="color: maroon; font-weight: bold;">Learn More <i
+                        class="fa fa-chevron-right" style="font-size: 12px;"></i></a>
+            </div>
+            <div class="col-md-6">
+                <img src="sec7/s7 a.jpg" class="img-fluid" style="width: 100%;" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    <!-- </section> -->
+    <!-- section-8 -->
+    <section class="section8">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6 text-center py-4" style="color: maroon;font-family: adobe-garamond-pro, serif;">
+                    <h3>We call Chicago home</h3>
+                </div>
+                <div class="col-md-6">
+                    <p>Chicago is not only in our name, it’s woven into the fabric of this institution. Located in the
+                        Hyde Park neighborhood, we benefit from the diversity, arts, and vibrant culture of our South
+                        Side community. </p>
+                    <a href="#" style="color: maroon; font-weight: bold;">LEARN MORE <i class="fa fa-chevron-right"
+                            style="font-size: 14px;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 p-1">
+                    <div class="card overlay-card">
+                        <img src="sec8/s8 c1.webp" class="card-img-top" alt="Image 1">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <p class="card-text">Hyde Park is a short trip from downtown Chicago, allowing easy
+                                    access to cultural, economic, and research opportunities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 p-1">
+                    <div class="card overlay-card">
+                        <img src="sec8/s8 c2.webp" class="card-img-top" alt="Image 2">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <p class="card-text">Explore a diverse range of artwork at the University's Smart Museum
+                                    of Art.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 p-1">
+                    <div class="card overlay-card">
+                        <img src="sec8/s8 c3.webp" class="card-img-top" alt="Image 3">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <p class="card-text">A Gothic grotesque adorns Cobb Gate and greets visitors as they
+                                    enter campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3 p-1">
+                    <div class="card overlay-card">
+                        <img src="sec8/s8 c5.png" class="card-img-top" alt="Image 4">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <p class="card-text">Students walk through the Main Quadrangles at the heart of the
+                                    UChicago campus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content Cards Section -->
+    <section class="content-cards py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="section-heading" style="color: #4D4D4D; font-size: 26px;">EVENTS</h2>
+                </div>
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: maroon;">Event Date: July 13</h5>
+                            <a href="https://events.uchicago.edu/event/236480-we-outside-explore-untidy-objects-and-screen-printing"
+                                class="card-link text-secondary">We Outside: Explore Untidy Objects and Screen
+                                Printing!</a>
+                            <p class="card-text mt-3" style="color: maroon;">4:30 pm - 6:30 pm <br>
+                                Logan Center, South Lawn</p>
+                            <a href="#" class="link-text text-secondary">Add to Calendar (iCal)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: maroon;">Event Date: July 15</h5>
+                            <a href="https://events.uchicago.edu/event/236765-rear-view-mirror-sessions-minnie-riperton"
+                                class="card-link text-secondary">Rear View Mirror Sessions: Minnie Riperton</a>
+                            <p class="card-text mt-3" style="color: maroon;">6:30 pm - 9:00 pm <br>
+                                335 E. Garfield Blvd, Chicago IL (The Arts Lawn)</p>
+                            <a href="#" class="link-text text-secondary">Add to Calendar (iCal)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: maroon;">Event Date: July 17</h5>
+                            <a href="https://events.uchicago.edu/event/236766-definition-theatre-company-x-cpl-play-reading"
+                                class="card-link text-secondary">Definition Theatre Company x CPL Play Reading</a>
+                            <p class="card-text mt-3" style="color: maroon;">6:00 pm <br>
+                                335 E. Garfield Blvd, Chicago IL (The Arts Lawn)</p>
+                            <a href="#" class="link-text text-secondary">Add to Calendar (iCal)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: maroon;">Event Date: July 19</h5>
+                            <a href="https://events.uchicago.edu/event/236767-ways-of-dwelling-a-conversation-through-art"
+                                class="card-link text-secondary">Ways of Dwelling A Conversation Through Art</a>
+                            <p class="card-text mt-3" style="color: maroon;">7:00 pm - 9:00 pm <br>
+                                Green Line Performing Arts Center, 329 E. Garfield Blvd</p>
+                            <a href="#" class="link-text text-secondary">Add to Calendar (iCal)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center pt-4">
+            <button type="button" class="btn btn-outline"
+                style="color: maroon; border-color: maroon; font-weight: bold;"> <a href="https://events.uchicago.edu/"
+                    style="color: maroon;">SEE MORE EVENTS</a></button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-5" style="font-family: Montserrat, sans-serif; background-color: #4d4d4d;">
+        <div class="container" style="line-height: 2rem;">
+            <div class="row">
+                <div>
+                    <!-- Logo and Address -->
+                    <div class="col-md-6 mb-4">
+                        <img src="FooterLogo.jpg" alt="Logo" class="img-fluid mb-3">
+                    </div>
+                    <!-- address Column -->
+                    <div class="col-md-7 ">
+                        <address>
+                            <h5 style="font-weight: bold;">The University of Chicago</h5>
+                            <p> Edward H. Levi Hall
+                                5801 S. Ellis Ave.
+                                Chicago, IL 60637</p>
+                        </address>
+                    </div>
+                </div>
+                <!-- Links Column 1 -->
+                <div class="col-md-4 mb-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Title IX</a></li>
+                        <li><a href="#" class="text-white">Non-Discrimination statement</a></li>
+                        <li><a href="#" class="text-white">Accreditation/IBHE Resolution</a></li>
+                        <li><a href="#" class="text-white">Emargency Information</a></li>
+                        <li><a href="#" class="text-white">Job Opportunities</a></li>
+                        <li><a href="#" class="text-white">Make A Gift</a></li>
+                        <li><a href="#" class="text-white">Accessibility</a></li>
+                        <li><a href="#" class="text-white">Privacy</a></li>
+                    </ul>
+                </div>
+                <!-- Links Column 2 -->
+                <div class="col-md-3 mb-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Visit UChicago</a></li>
+                        <li><a href="#" class="text-white">Campus Directory</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">Maps & Directions</a></li>
+                        <li><a href="#" class="text-white">My UChicago</a></li>
+                        <li><a href="#" class="text-white">Office 365</a></li>
+                        <li><a href="#" class="text-white">A-Z Listing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Social Icons -->
+            <div class="row">
+                <div class="col-12  text-center mt-4">
+                    <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-instagram" style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-linkedin-in"
+                            style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-youtube"
+                            style="font-size: 1.5rem;"></i></i></a>
+                </div>
+            </div>
+            <hr>
+            <!-- copyright -->
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p class="mb-0">&copy; 2024 The University of Chicago</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

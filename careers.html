@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREERS AT UCHICAGO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-logo {
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translateX(-50%);
+            z-index: 50;
+        }
+        .navbar-underline .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .bg-logo {
+            background-image: url(careers/phoenix.6be056ef\ \(1\).svg);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-media-links a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: maroon;
+            font-weight: bold;
+        }
+
+        .left-section a,
+        .right-section a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .right-section h3 {
+            margin-bottom: 15px;
+        }
+
+        .right-section p {
+            margin-bottom: 20px;
+        }
+        #icons{
+            margin-top: -5px;
+        }
+        #navbar2{
+            margin-top: 5px;
+        }
+        @media only screen and (max-width:992px){
+            #second-nav{
+                display: none;
+            }
+            .navbar-collapse.w-100.order-1.order-md-1.dual-collapse2.collapse.show {
+                margin-top: 32px;
+                padding: 10px;
+                background-color: maroon;
+            }
+
+            div#navbar2 {
+                padding: 10px;
+                background-color: maroon;
+                margin-top: 0px;
+            }
+        }
+        @media only screen and (max-width:704px) {
+            .navbar-dark .navbar-toggler {
+                color: rgba(255, 255, 255, .5);
+                border-color: rgba(255, 255, 255, .1);
+                position: absolute;
+            }
+
+            img {
+                vertical-align: middle;
+                border-style: none;
+                width: 200px;
+            }
+            .navbar-collapse.w-100.order-1.order-md-1.dual-collapse2.collapse.show {
+                margin-top: 32px;
+                padding: 10px;
+                background-color: maroon;
+            }
+
+            div#navbar2 {
+                padding: 10px;
+                background-color: maroon;
+                margin-top: 0px;
+            }
+            #second-nav{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Primary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: maroon; height: 40px; z-index: 1;">
+
+        <div class="navbar-collapse collapse w-100 order-1 order-md-1 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html" style="color: #fff; font-size: 14px;">NEWS</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="careers.html" style="color: #fff; font-size: 14px;">CAREERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="visit.html" style="color: #fff; font-size: 14px;">VISIT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: #fff; font-size: 14px;">
+                        INFO FOR
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" style="color: #4D4D4D;">Students</a>
+                        <a class="dropdown-item" href="#">Faculty</a>
+                        <a class="dropdown-item" href="#">Staff</a>
+                        <a class="dropdown-item" href="#">Alumni</a>
+                        <a class="dropdown-item" href="#">Parents</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0 navbar-logo">
+            <a class="navbar-brand mx-auto" href="#"><img src="logo-background.svg" alt="Logo" width="300"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2" style="float: inline-end;
+    font-size: large;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbar2" >
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff; font-size: 14px;">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff; font-size: 14px;">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: #fff; font-size: 14px;">DIRECTORY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="icons" href="#"><i class="nav-link fa fa-search"
+                            style=" color: #fff;"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="second-nav" style="background-color: white;">
+        <div class="container">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="secondary-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            WHO WE ARE
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown1">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Scholarship at
+                                UChicago</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">What we Value</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Facts and
+                                Figures</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Global Impact</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            EDUCATION & RESEARCH
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown2">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Schools &
+                                Divisions</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Academic
+                                Calender</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Office of
+                                Research</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">N12 Education</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Affiliated
+                                Laboratories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown3" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            ADMISSIONS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown3">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Undergraduate
+                                Admissions</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Undergraduate
+                                Programs</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Postgraduate
+                                Programs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Summer
+                                Programs</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Financial Aid
+                                &Tuition</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="secondaryDropdown4" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-size: 12px; color: #4D4D4D;">
+                            LIFE AT UCHICAGO
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="secondaryDropdown4">
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Hyde Park</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Student life</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Campus
+                                Resources</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Art Institutions
+                                and Programs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">>Health &
+                                Wellness</a>
+                            <a class="dropdown-item" href="#" style="color: maroon; font-size: 12px;">Safety &
+                                Security</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" id="secondaryDropdown5" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="font-size: 12px; color: #4D4D4D;">
+                            UCHICAGO MEDICINE
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline my-3 my-sm-0" type="button" style="color: maroon;
+                border-color: maroon; font-size: 14px; font-weight: bold;"><a
+                                href="https://giving.uchicago.edu/site/Donation2?df_id=1681&mfc_pref=T&1681.donation=form1"
+                                style="color: maroon; text-decoration: none;">GIVE</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 bg-logo">
+                <h1 class="heading-left text-maroon"
+                    style="margin-left: 20px; color: maroon; font-family: 'Times New Roman', Times, serif;">Career
+                    Opportunities</h1>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- section-2 -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 social-media-links mt-5" style="line-height: 2.5rem;">
+                <a href="https://www.facebook.com/uchicago" class="text-social"><i class="fab fa-facebook-f"
+                        style="font-size: 1rem;"></i> UChicago on Facebook</a>
+                <a href="https://twitter.com/UChicago" class="text-social"><i class="fab fa-twitter"
+                        style="font-size: 1rem;"></i> @UChicago on X (formerly Twitter)</a>
+                <a href="https://instagram.com/uchicago" class="text-social"><i class="fab fa-instagram"
+                        style="font-size: 1rem;"></i> UChicago on Instagram</a>
+                <a href="https://www.linkedin.com/school/uchicago/" class="text-social"><i class="fab fa-linkedin-in"
+                        style="font-size: 1rem;"></i> UChicago on LinkedIn</a>
+                <a href="http://www.youtube.com/uchicago" class="text-social"><i class="fab fa-youtube"
+                        style="font-size: 1rem;"></i> UChicago on YouTube</a>
+            </div>
+            <div class="col-md-8 image-section" style="display: flex; justify-content: flex-end; align-items: center;">
+                <img src="careers/pic1.jpg" alt="Image Description" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+    <!-- section-3 -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-md-4 left-section">
+                <button class="btn btn-secondary mb-3"
+                    style=" background: none; border: none; color: #4D4D4D; font-weight: bold; font-size: 18px;">Related
+                    Links<i class="fa fa-chevron-down"></i></button>
+                <a href="#" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">Community
+                    Safety</a>
+                <a href="https://president.uchicago.edu/page/university-organizational-chart" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">University
+                    Organizational Chart</a>
+                <a href="#" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">University
+                    Reports</a>
+                <a href="#" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">Affirmative
+                    Action/Equal Opportunity/Disabled/Veteran Employer</a>
+                <a href="#" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">University's
+                    Notice of Nondiscrimination</a>
+                <a href="#" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">Annual
+                    Security & Fire Safety Report</a>
+                <a href="#" class="text-link"
+                    style="color: maroon; border-bottom: 1px dotted; font-size: 18px; padding-bottom: 8px;">Labor
+                    Condition Applications</a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-md-8 right-section">
+                <p style="font-size: 18px; color: #4D4D4D;">The University of Chicago is the second-largest private
+                    employer in Chicago. We are a multicultural,
+                    international community of more than 20,000 faculty and staff—each supporting UChicago’s mission of
+                    inquiry and academic excellence.</p>
+                <h3
+                    style="font-family: 'Times New Roman', Times, serif; color: maroon; border-bottom: 2px solid maroon;">
+                    Apply for a job</h3>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;"> University
+                    Staff Job Opportunities</a>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Academic Job
+                    Opportunities</a>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">University of
+                    Chicago Medicine Job Opportunities</a>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">University of
+                    Chicago Medicine Job Opportunities</a>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">International
+                    Job Applicants</a>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Fair Chance
+                    employer FAQ</a>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Mock
+                    interviews for UChicago job seekers</a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-end" style="line-height: 1.5rem;">
+            <div class="col-md-8 right-section" style="line-height: 1.5rem;">
+                <h3 style="font-family: 'Times New Roman', Times, serif; color: maroon; border-bottom: 2px solid maroon;">
+                    University Staff Job Opportunities</h3>
+
+                <!-- First Subsection -->
+                <h4 style="color: #4D4D4D; font-weight: bold;">INTERNAL APPLICANTS</h4>
+                <p style="font-size: 18px;">For current UChicago employees.</p>
+                <a href="#" class="text-link" style="color: maroon; font-size: 18px;">Log into Workday.</a>
+                <p style="font-size: 18px;"><span>From your Career Worklet, update your career profile, search and apply
+                        for UChicago staff
+                        opportunities.</span></p>
+                <p style="font-size: 18px;">How to determine you are an internal applicant:</p>
+
+                <span style="font-size: 18px;">You are able to log into <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px;">Work Day.</a></span>
+                <span style="font-size: 18px;">When logging into <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px;">Work Day</a>, a Career Worklet <img
+                        src="careers/Career-Worklet-Icon.jpg" alt="" style="width: 58px;"> is available.</span>
+
+                <!-- Second Subsection -->
+                <h4 style="color: #4D4D4D; font-weight: bold;">EXTERNAL APPLICANTS</h4>
+                <p style="font-size: 18px;">For job seekers that do not currently work at the University of Chicago.</p>
+                <span style="font-size: 18px;">Related Links:</span>
+                <a href="https://uchicago.wd5.myworkdayjobs.com/External" class="text-link"
+                    style="font-size: 18px; color: maroon;">Search for staff opportunities</a>
+
+
+                <!-- Third Subsection -->
+                <h4 style="color: #4D4D4D; font-weight: bold;">RESOURCES</h4>
+                <p style="font-size: 18px;">Refer to our External Applicants Support Resources to learn how to create
+                    your profile, search and apply for a position, edit your email address, and review an offer.</p>
+                <span>
+                    <p style="font-size: 18px;">For additional support, please submit an Applicant Inquiry request.</p>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-end">
+            <div class="col-md-8 right-section">
+                <h2 class="underlined-heading"
+                style="font-family: 'Times New Roman', Times, serif; color: maroon; border-bottom: 2px solid maroon;">
+                    Living and working in Hyde Park</h2>
+                <p style="color: #4D4D4D; font-size: 18px;">UChicago is surrounded by an engaging and exciting community
+                    that compels
+                    many to make their home in Hyde Park.With top health care facilities, outstanding schools,
+                    abundant housing choices, local retail and dining facilities, and diverse places to worship, it’s
+                    clear why many UChicago faculty and staff choose to live in Hyde Park.</p>
+                <div class="link-list">
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Child
+                        Care</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Community
+                        Safety</a>
+                    <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px; padding-bottom: 4px;">Housing</a>
+                    <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px; padding-bottom: 4px;">Laboratory Schools</a>
+                    <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px; padding-bottom: 4px;">Transportation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row justify-content-end">
+            <div class="col-md-8 right-section">
+                <h2 class="underlined-heading"
+                    style="font-family: 'Times New Roman', Times, serif; color: maroon;text-decoration: underline;">
+                    Benefits</h2>
+                <p style="color: #4D4D4D; font-size: 18px;">The University of Chicago offers a wide variety of benefits
+                    programs and
+                    resources to its staff members. For our health plans and continuing education opportunities to our
+                    flexible spending accounts and competitive retirement plans, the University offers benefits that
+                    matter to you at each stage of your career.</p>
+                <div class="link-list">
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Child
+                        Care</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Dental
+                        Plans</a>
+                    <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px; padding-bottom: 4px;">Disability Benefits</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Domestic
+                        Partnership Benefits</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Elder
+                        Care</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Flexible
+                        Spending Accounts</a>
+                    <a href="#" class="text-link"
+                        style="color: maroon; font-size: 18px; padding-bottom: 4px;">Retirement Plans</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Training
+                        and Development Opportunities</a>
+                    <a href="#" class="text-link" style="color: maroon; font-size: 18px; padding-bottom: 4px;">Tuition
+                        Benefits</a>
+                </div>
+            </div>
+        </div>
+    </div>
+              <!-- FOOTER -->
+    <footer class="footer text-white py-5" style="font-family: Montserrat, sans-serif; background-color: #4d4d4d;">
+        <div class="container" style="line-height: 2rem;">
+            <div class="row">
+                <!-- Logo and Address -->
+                <div class="col-md-3 mb-4">
+                    <img src="FooterLogo.jpg" alt="Logo" class="img-fluid mb-3">
+                </div>
+                <!-- address Column -->
+                <div class="col-md-3 mb-4">
+                    <address>
+                        <h5 style="font-weight: bold;">The University of Chicago</h5>
+                        <p> Edward H. Levi Hall
+                            5801 S. Ellis Ave.
+                            Chicago, IL 60637</p>
+                    </address>
+                </div>
+                <!-- Links Column 1 -->
+                <div class="col-md-3 mb-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Title IX</a></li>
+                        <li><a href="#" class="text-white">Non-Discrimination statement</a></li>
+                        <li><a href="#" class="text-white">Accreditation/IBHE Resolution</a></li>
+                        <li><a href="#" class="text-white">Emargency Information</a></li>
+                        <li><a href="#" class="text-white">Job Opportunities</a></li>
+                        <li><a href="#" class="text-white">Make A Gift</a></li>
+                        <li><a href="#" class="text-white">Accessibility</a></li>
+                        <li><a href="#" class="text-white">Privacy</a></li>
+                    </ul>
+                </div>
+                <!-- Links Column 2 -->
+                <div class="col-md-3 mb-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Visit UChicago</a></li>
+                        <li><a href="#" class="text-white">Campus Directory</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">Maps & Directions</a></li>
+                        <li><a href="#" class="text-white">My UChicago</a></li>
+                        <li><a href="#" class="text-white">Office 365</a></li>
+                        <li><a href="#" class="text-white">A-Z Listing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Social Icons -->
+            <div class="row">
+                <div class="col-12  text-center mt-4">
+                    <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-instagram" style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-linkedin-in"
+                            style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-youtube" style="font-size: 1.5rem;"></i></a>
+                </div>
+            </div>
+            <hr>
+            <!-- copyright -->
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p class="mb-0">&copy; 2024 The University of Chicago</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
